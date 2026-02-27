@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "roin-orca",
+  "date": "February 2026",
+  "abstract": "Structured brainstorming skill v3 that turns rough ideas into validated designs through collaborative dialogue. Produces a JSON summary with $schema reference at session end for structured downstream consumption."
+}
