@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "roin-orca",
+  "date": "February 2026",
+  "abstract": "Generates categorized release notes from conventional commits and creates GitHub releases via gh CLI. Supports dry-run preview and first-release mode."
+}
