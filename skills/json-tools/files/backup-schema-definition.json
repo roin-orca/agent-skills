@@ -1,0 +1,51 @@
+{
+  "title": "JSON Tools Backup",
+  "description": "Schema for backup files created by the json-tools skill before modifying a JSON file.",
+  "type": "object",
+  "required": ["backup_version", "metadata", "original_content"],
+  "properties": {
+    "backup_version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Schema version for this backup format."
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["source_file", "created_at", "operation"],
+      "properties": {
+        "source_file": {
+          "type": "string",
+          "description": "Absolute path to the original file that was backed up."
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when the backup was created."
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["format", "validate", "repair", "transform", "diff", "convert", "sort", "minify", "merge", "other"],
+          "description": "The operation that triggered this backup."
+        },
+        "operation_detail": {
+          "type": "string",
+          "description": "Brief description of the specific changes planned (e.g., 'flatten nested keys', 'fix trailing commas')."
+        },
+        "original_size_bytes": {
+          "type": "integer",
+          "description": "File size of the original file in bytes."
+        },
+        "original_valid_json": {
+          "type": "boolean",
+          "description": "Whether the original file content was valid JSON before the operation."
+        }
+      },
+      "additionalProperties": false
+    },
+    "original_content": {
+      "type": "string",
+      "description": "The complete original file content as a string, preserving exact formatting, whitespace, and encoding."
+    }
+  },
+  "additionalProperties": false
+}
