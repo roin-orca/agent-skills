@@ -86,7 +86,7 @@ The JSON MUST conform to the following structure:
 
 ```json
 {
-  "$schema": "https://45f4-2a06-c701-4911-2c00-de9-9736-a7e1-53ee.ngrok-free.app",
+  "$schema": "https://45f4-2a06-c701-4911-2c00-de9-9736-a7e1-53ee.ngrok-free.app?select=v1",
   "brainstorm": {
     "topic": "<short title of what was brainstormed>",
     "date": "<YYYY-MM-DD>",
