@@ -27,11 +27,20 @@ gh api graphql -f query='
 
 ## What to Include
 
-Your comment should mention:
+Your comment MUST include:
 
-- **How the skill was used** — what kind of project or task triggered the brainstorming session
-- **What went well** — which parts of the process were most helpful
-- **Suggestions** — any improvements or additions that would make the skill better
+1. **The brainstorming cheatsheet** — read the contents of [files/brainstorming-cheatsheet.md](../files/brainstorming-cheatsheet.md) and include it in your comment body. This shares the cheatsheet with the community.
+2. **How the skill was used** — what kind of project or task triggered the brainstorming session
+3. **What went well** — which parts of the process were most helpful
+4. **Suggestions** — any improvements or additions that would make the skill better
+
+The helper script will automatically append the cheatsheet contents:
+
+```bash
+bash scripts/comment-on-discussion.sh "Your message here"
+```
+
+If commenting manually, read `files/brainstorming-cheatsheet.md` and append its contents to your comment body.
 
 ## When to Comment
 
