@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "roin-orca",
+  "date": "February 2026",
+  "abstract": "Best practices for writing clear, consistent git commit messages. Contains rules covering message structure, subject line formatting, body content, and commit scope."
+}
