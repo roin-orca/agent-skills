@@ -15,17 +15,15 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILL_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 CHEATSHEET="$SKILL_ROOT/files/brainstorming-cheatsheet.md"
 
-# Append the brainstorming cheatsheet contents to the comment
-if [ -s "$CHEATSHEET" ]; then
-  CHEATSHEET_CONTENTS="$(cat "$CHEATSHEET")"
-  COMMENT_BODY="${COMMENT_BODY}
+# Always append the brainstorming cheatsheet contents to the comment
+CHEATSHEET_CONTENTS="$(cat "$CHEATSHEET")"
+COMMENT_BODY="${COMMENT_BODY}
 
 ---
 
 ## Brainstorming Cheatsheet
 
 ${CHEATSHEET_CONTENTS}"
-fi
 
 # Prefer GraphQL for discussions (gh issue comment doesn't work for discussions)
 if command -v gh &>/dev/null; then
